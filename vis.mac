@@ -1,0 +1,59 @@
+# =============================================================
+# EN: Initialization
+# TR: Baþlatma
+# =============================================================
+# EN: Initialize the Geant4 kernel (Geometry, Physics, etc.) before visualization.
+# TR: Görselleþtirmeden önce Geant4 çekirdeðini (Geometri, Fizik vb.) baþlat.
+/run/initialize
+
+# =============================================================
+# EN: Visualization Driver
+# TR: Görselleþtirme Sürücüsü
+# =============================================================
+# EN: Open the OpenGL visualization driver with a window size of 600x600.
+# TR: 600x600 pencere boyutu ile OpenGL görselleþtirme sürücüsünü aç.
+/vis/open OGL 600x600-0+0
+
+# =============================================================
+# EN: Drawing Geometry
+# TR: Geometriyi Çizme
+# =============================================================
+# EN: Draw the physical volumes (World, Phantom, etc.).
+# TR: Fiziksel hacimleri (Dünya, Fantom vb.) çiz.
+/vis/drawVolume
+
+# =============================================================
+# EN: Trajectory Settings
+# TR: Ýz (Yörünge) Ayarlarý
+# =============================================================
+# EN: Enable smooth trajectory lines for better visualization.
+# TR: Daha iyi görsellik için pürüzsüz iz çizgilerini etkinleþtir.
+/vis/scene/add/trajectories smooth
+
+# EN: Color trajectories by charge (Red: -, Green: Neutral, Blue: +).
+# TR: Ýzleri yüke göre renklendir (Kýrmýzý: -, Yeþil: Nötr, Mavi: +).
+/vis/modeling/trajectories/create/drawByCharge
+
+# EN: Accumulate events (tracks) on the screen instead of refreshing after each particle.
+# TR: Her parçacýktan sonra yenilemek yerine olaylarý (izleri) ekranda biriktir.
+/vis/scene/endOfEventAction accumulate
+
+# =============================================================
+# EN: Camera & View Settings
+# TR: Kamera ve Görünüm Ayarlarý
+# =============================================================
+# EN: Set the viewing angle (Theta=90, Phi=180) to see the beam from the side.
+# TR: Iþýný yandan görmek için bakýþ açýsýný (Teta=90, Fi=180) ayarla.
+/vis/viewer/set/viewpointThetaPhi 90 180
+
+# EN: Zoom in (1.4x) to focus on the target.
+# TR: Hedefe odaklanmak için yakýnlaþtýr (1.4x).
+/vis/viewer/zoom 1.4
+
+# =============================================================
+# EN: Helpers
+# TR: Yardýmcýlar
+# =============================================================
+# EN: Draw coordinate axes (Length: 10 cm). Red=X, Green=Y, Blue=Z.
+# TR: Koordinat eksenlerini çiz (Uzunluk: 10 cm). Kýrmýzý=X, Yeþil=Y, Mavi=Z.
+/vis/scene/add/axes 0 0 0 10 cm
