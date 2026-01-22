@@ -21,29 +21,37 @@ cd Release
 ### 2. Run Simulations
 You can run the simulation in two different modes using the provided macro files.
 
-🅰️ Proton Mode (Bragg Peak)
+# 🅰️ Proton Mode (Bragg Peak)
 Simulates 150 MeV protons.
-
+```bash
 ./bragg.exe proton.mac
+```
 Output: You will see a sharp peak in energy deposition at the end of the range.
 
-🅱️ X-Ray Mode (Gamma Attenuation)
+# 🅱️ X-Ray Mode (Gamma Attenuation)
 Simulates 6 MeV photons (Gamma).
 
+```bash
 ./bragg.exe xray.mac
+```
 Output: You will see a continuously decreasing energy profile (exponential decay).
 
 ### 3. Visualization
 To run interactively with OpenGL visualization:
 
+```bash
 ./bragg.exe
+```
 Then, in the simulation session:
 
+```bash
 /control/execute proton.mac
+```
+or
 
-# or
-
+```bash
 /control/execute xray.mac
+```
 
 
 ### 📂 File Structure
