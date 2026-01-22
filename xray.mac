@@ -1,0 +1,5 @@
+# X-RAY MODU - X-RAY MODE
+/run/initialize
+/gun/particle gamma
+/gun/energy 6 MeV
+/run/beamOn 100000
